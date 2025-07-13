@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Base',
   data() {
     return {
       value: 0
