@@ -8,7 +8,7 @@ export default {
   },
   
   computed: {
-    value() {
+    count() {
       return `Счётчик нажатий: ${this.value}`
     }
   },
@@ -23,7 +23,7 @@ export default {
 
 <template>
   <div class="block">
-    <p>{{value}}</p>
+    <p>{{count}}</p>
     
     <button @click="counter">
       +1
