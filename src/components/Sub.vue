@@ -10,7 +10,7 @@ export default {
   
   methods: {
     handleClick() {
-    
+      // Здесь что-то происходит...
     },
   },
 }
