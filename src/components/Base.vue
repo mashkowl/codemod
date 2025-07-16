@@ -1,9 +1,21 @@
 <script>
 export default {
   name: 'Base',
+  
+  props: {
+    message: {
+      type: String,
+      default: ''
+    }
+  },
+  
   data() {
     return {
-      value: 0
+      value: 0,
+      user: {
+        name: 'John',
+        age: 30
+      }
     }
   },
   
@@ -17,18 +29,31 @@ export default {
     counter() {
       this.value += 1
     }
-  }
+  },
+  
+  watch: {
+    value(val) {
+      console.log('Тест слежения', val)
+    }
+  },
+  
+  mounted() {
+    console.log('Тест хуков жизненного цикла')
+  },
 }
 </script>
 
 <template>
+
   <div class="block">
+    <h2>{{message}}</h2>
     <p>{{count}}</p>
     
     <button @click="counter">
       +1
     </button>
   </div>
+
 </template>
 
 <style scoped>

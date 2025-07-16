@@ -1,10 +1,13 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import Base from './components/Base.vue'
+import { onMounted } from "vue";
+
+onMounted()
 </script>
 
 <template>
   <h1>Тестирование codemod</h1>
-  <HelloWorld/>
+  <Base message="Тестовый пропс"/>
 </template>
 
 <style scoped>
