@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import ProductCard from './ProductCard.vue';
-
+<script>
 import { reactive } from 'vue';
 
 const product = reactive({
@@ -12,13 +10,14 @@ const product = reactive({
 const addToCart = (product) => {
   //добавление продукта в корзину
 }
-
 </script>
 
 <template>
-  <ProductCard 
-    :product="product" 
-    @add-to-cart="addToCart" 
-  />
+  <div class="product-card">
+    <img :src="product.image" />
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.price }}$</p>
+    <button @click="addToCart(product)">Buy</button>
+  </div>
 </template>
 
